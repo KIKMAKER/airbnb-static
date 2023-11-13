@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="p2">Flats</h1>
+  <br>
+    <% @flats.each do |flat| %>
+      <!--<div class="d-flex flex-direction-column">-->
+        <h5><%= link_to flat["name"], flat_path(flat["id"]) %></h5>
+        <img src="<%= flat["imageUrl"] %>" alt="", style="width:80%">
+        <p><%= flat["priceCurrency"] %> <%= flat["price"] %></p>
+      <!--</div>-->
+    <% end %>
+  </div>
